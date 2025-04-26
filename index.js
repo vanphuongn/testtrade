@@ -649,14 +649,14 @@ const findRetestForBuy = async (coinName2, highTimeRequest, lowTimeRequest, mulC
             }
         }
 
-        if (idexForBuy > 0
-            //  && (idexForBuy< 30)
-        ) {
-            // console.log(coinName2 + " lowtime " + lowTimeRequest + " idx " + idexForBuy
-            //     + " highTime " + highTimeRequest + " idxTouch " + nearestUnderEma50AndBBLow
+        // if (idexForBuy > 0
+        //     //  && (idexForBuy< 30)
+        // ) {
+        //     console.log(coinName2 + " lowtime " + lowTimeRequest + " idx " + idexForBuy
+        //         + " highTime " + highTimeRequest + " idxTouch " + nearestUnderEma50AndBBLow
 
-            // )
-        }
+        //     )
+        // }
 
         if (idexForBuy > 0
             && (idexForBuy < 30)
@@ -704,8 +704,9 @@ const updatePrice = async (timeRequest) => {
                     //    if (highestTimeRequest != "")
                     {
                              
-                         await findRetestForBuy(coinName2, "5m", "5m", 1)
+                         await findRetestForBuy(coinName2, "1h", "15m", 4)
                         await findRetestForBuy(coinName2, "15m", "3m", 5)
+                        await findRetestForBuy(coinName2, "30m", "5m", 6)
                         // await findRetestForBuy(coinName2, "5m", "1m", 5)
                         // await findRetestForBuy(coinName2, "1h", "15m", 4)
                     }
